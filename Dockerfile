@@ -8,4 +8,7 @@ RUN dnf -y --setopt=tsflags=nodocs update && \
 ADD app.py /opt/
 ADD run.sh /opt/
 
+RUN chmod 755 /opt/app.py
+RUN chmod 755 /opt/run.sh
+
 CMD ["/opt/run.sh"]
