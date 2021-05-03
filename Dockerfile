@@ -3,7 +3,7 @@ MAINTAINER Simon Reber <sreber@redhat.com>
 
 USER root
 # Copy entitlements
-COPY /run/secrets/openshift.io/build/etc-pki-entitlement /etc/pki/entitlement
+COPY ./etc-pki-entitlement /etc/pki/entitlement
 
 # Copy subscription manager configurations
 COPY ./rhsm-conf /etc/rhsm
