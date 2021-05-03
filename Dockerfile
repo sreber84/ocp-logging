@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM registry.redhat.io/ubi8:latest
 MAINTAINER Simon Reber <sreber@redhat.com>
 
 USER root
