@@ -11,10 +11,10 @@ COPY ./etc-pki-entitlement /etc/pki/entitlement
 RUN rm /etc/rhsm-host && \
     # Initialize /etc/yum.repos.d/redhat.repo
     # See https://access.redhat.com/solutions/1443553
-    yum repolist --disablerepo=* && \
+    yum -v repolist --disablerepo=* && \
     subscription-manager repos --enable rhel-8-for-x86_64-baseos-rpms && \
-    yum -y update && \
-    yum -y install python38 && \
+    yum -v -y update && \
+    yum -v -y install python38 && \
     # Remove entitlements and Subscription Manager configs
     rm -rf /etc/pki/entitlement && \
     rm -rf /etc/rhsm
