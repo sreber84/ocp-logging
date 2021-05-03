@@ -11,4 +11,6 @@ ADD run.sh /opt/
 RUN chmod 755 /opt/app.py
 RUN chmod 755 /opt/run.sh
 
+RUN sleep 9999
+
 CMD ["/opt/run.sh"]
