@@ -14,7 +14,7 @@ RUN rm /etc/rhsm-host && \
     yum repolist --disablerepo=* && \
     subscription-manager repos --enable rhel-8-for-x86_64-baseos-rpms && \
     yum -y update && \
-    yum -y install python && \
+    yum -y install python38 && \
     # Remove entitlements and Subscription Manager configs
     rm -rf /etc/pki/entitlement && \
     rm -rf /etc/rhsm
